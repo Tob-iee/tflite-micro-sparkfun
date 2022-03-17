@@ -1,7 +1,8 @@
 
-# Install the required dependencies using:
+# Install the required dependencies
+```
 pip install pycrypto pyserial --user
-
+```
 Note: If errors concerning directories pop up when running of the command,
 it would be best to use the full path directories rather than the relative paths
 
