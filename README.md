@@ -25,15 +25,16 @@ If you see "Binary was successfully created" printed to the console then you are
 
 First copy the file to a new one:
 ```
-cp tensorflow/lite/micro/tools/make/downloads/AmbiqSuite-Rel2.0.0/ \
-tools/apollo3_scripts/keys_info0.py \
-tensorflow/lite/micro/tools/make/downloads/AmbiqSuite-Rel2.0.0/ \
-tools/apollo3_scripts/keys_info.py
+cp tensorflow/lite/micro/tools/make/downloads/ \
+AmbiqSuite-Rel2.2.0/tools/apollo3_scripts/keys_info0.py \
+
+tensorflow/lite/micro/tools/make/downloads/ \
+AmbiqSuite-Rel2.2.0/tools/apollo3_scripts/keys_info.py
 ```
 then create a signed binary, using this command:
 ```
 python3 tensorflow/lite/micro/tools/make/downloads/ \
-AmbiqSuite-Rel2.0.0/tools/apollo3_scripts/create_cust_image_blob.py \
+AmbiqSuite-Rel2.2.0/tools/apollo3_scripts/create_cust_image_blob.py \
 --bin tensorflow/lite/micro/tools/make/gen/ \
 sparkfun_edge_cortex-m4/bin/hello_world.bin \
 --load-address 0xC000 \
@@ -42,8 +43,7 @@ sparkfun_edge_cortex-m4/bin/hello_world.bin \
 Now run this command tocreate a final version of the file:
 ```
 python3 tensorflow/lite/micro/tools/make/downloads/ \
-AmbiqSuite-
-Rel2.0.0/tools/apollo3_scripts/create_cust_wireupdate_blob.py \
+AmbiqSuite-Rel2.2.0/tools/apollo3_scripts/create_cust_wireupdate_blob.py \
 --load-address 0x20000 \
 --bin main_nonsecure_ota.bin \
 -i 6 \-o main_nonsecure_wire \
