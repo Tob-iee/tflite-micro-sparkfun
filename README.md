@@ -38,7 +38,8 @@ AmbiqSuite-Rel2.2.0/tools/apollo3_scripts/create_cust_image_blob.py \
 --bin tensorflow/lite/micro/tools/make/gen/ \
 sparkfun_edge_cortex-m4/bin/hello_world.bin \
 --load-address 0xC000 \
--o main_nonsecure_ota 
+--magic-num 0xCB -o main_nonsecure_ota \
+--version 0x0
 ```
 Now run this command tocreate a final version of the file:
 ```
